@@ -3,16 +3,33 @@ html, body {
     height: 100%;
 }
 
-img {
+.god_list{
+    z-index: 1;
+    position: absolute;
+    background-color: black;
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: 1;
+    visibility: hidden;
 }
 
-svg {
-    position: absolute;
+.close{
+    color: white;
+    font-size: 2rem;
+    margin: 2rem;
+    float: right;
+    cursor: pointer;
+}
+
+.map {
     z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image_map {
+    z-index: 3;
+    position: absolute;
 }
 
 polygon {
@@ -22,7 +39,7 @@ polygon {
 polygon:hover {
     cursor: pointer;
     fill: transparent;
-    stroke: rgba(104, 70, 6, 0.815);
+    stroke: rgba(117, 54, 2, 0.815);
     stroke-width:0.3%;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -41,5 +58,6 @@ polygon:hover {
     }
     100% {
         stroke-dasharray: 10000, 10000;
+        fill: rgba(221, 142, 22, 0.3);
     }
 }
