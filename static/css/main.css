@@ -20,6 +20,24 @@ polygon {
 polygon:hover {
     cursor: pointer;
     fill: transparent;
-    stroke: blue;
-    
+    stroke: rgba(104, 70, 6, 0.815);
+    stroke-width:0.3%;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 3000; 
+    stroke-dashoffset: 0; 
+
+    animation-name: lineMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    filter: url(#glow);
+}
+
+@keyframes lineMove {
+    0% {
+        stroke-dasharray: 0, 3000;
+    }
+    100% {
+        stroke-dasharray: 3000, 3000;
+    }
 }
