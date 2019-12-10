@@ -13,8 +13,14 @@
 </head>
 
 <body>
-    <div class="god_list">
-        <i class="far fa-window-close close" onclick="closeList()"></i>
+    <div class="story_area">
+        <div class="row">
+            <div class="story_title">希臘</div>
+            <i class="far fa-window-close close_icon" onclick="closeList()"></i>
+        </div>
+        <div class="row">
+            <div class="story">這是希臘神話喔</div>
+        </div>
     </div>
     <div>
         <img class="map" src="static/image/ancient map.jpg" id="map">
@@ -29,11 +35,11 @@
                 </feMerge>
             </filter>
 
-            <polygon id="area0" onclick="openList()" />
-            <polygon id="area1" onclick="openList()" />
-            <polygon id="area2" onclick="openList()" />
-            <polygon id="area3" onclick="openList()" />
-            <polygon id="area4" onclick="openList()" />
+            <polygon id="area0" onclick="openList($(this).attr('id'))" />
+            <polygon id="area1" onclick="openList($(this).attr('id'))" />
+            <polygon id="area2" onclick="openList($(this).attr('id'))" />
+            <polygon id="area3" onclick="openList($(this).attr('id'))" />
+            <polygon id="area4" onclick="openList($(this).attr('id'))" />
         </svg>
     </div>
     <script src="static/js/jquery-3.4.1.min.js"></script>
@@ -90,8 +96,10 @@
                 822, 366, 821, 345];
 
         $(function () {
-            $("#map").hide().fadeIn(3000);
-            $("#image_map").hide().fadeIn(3000);
+            $("#image_map").hide();
+            setTimeout(function () {
+                $("#image_map").show();
+            }, 2000)
             setPoints("#area", 5);
         })
 
@@ -120,14 +128,16 @@
             }
         }
 
-        function openList() {
-            $(".god_list").css("visibility", "visible");
-            $(".god_list").css("z-index", 4);
+        function openList(id) {
+            $(".story_area").attr("class", "story_area opening");
         }
 
         function closeList() {
-            $(".god_list").css("visibility", "hidden");
-            $(".god_list").css("z-index", 1);
+            $(".story_area").addClass("closing")
+            setTimeout(function () {
+                $(".story_area").attr("class", "story_area");
+            }, 200)
+
         }
     </script>
 </body>
