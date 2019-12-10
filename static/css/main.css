@@ -54,6 +54,7 @@ polygon:hover {
         fill: rgba(221, 142, 22, 0.3);
     }
 }
+
 .story_area {
     z-index: 1;
     position: absolute;
@@ -61,14 +62,14 @@ polygon:hover {
     height: 100%;
     visibility: hidden;
     background: no-repeat;
-    background-size: 100% 100%;
 }
 
 .story_area.opening {
     z-index: 4;
     visibility: visible;
     animation: image_fade_in 0.2s linear;
-    background-image: url(/static/image/test.jpg);
+    background-color: black;
+    opacity: 80%;
 }
 
 @keyframes image_fade_in {
@@ -94,44 +95,6 @@ polygon:hover {
     }
 }
 
-.opening .story_title {
-    float: left;
-    margin: 3rem;
-    min-width: 150px;
-    min-height: 30px;
-    color: black;
-    background-color: white;
-    font-size: 20px;
-    text-align: center;
-    opacity: 0.9;
-    animation: width_growing 2s;
-    border-radius: 5px;
-}
-
-@keyframes width_growing {
-    0% {
-        min-width: 0;
-        height: 0;
-        width: 0;
-    }
-}
-
-.opening .story {
-    margin: 3rem;
-    padding: 1rem;
-    color: black;
-    background-color: white;
-    font-size: 16px;
-    opacity: 0.9;
-    width: 50%;
-    height: 500px;
-    word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    animation: width_growing 2s;
-    border-radius: 10px;
-}
-
 .close_icon {
     color: white;
     font-size: 2rem;
@@ -139,3 +102,42 @@ polygon:hover {
     float: right;
     cursor: pointer;
 }
+
+.opening .story_wrap {
+    margin: auto;
+    display: flex; 
+    border-radius: 30px;
+    background-color: wheat;
+    opacity: 0.8;
+    width: 75%;
+    height: 75%;
+    animation: width_growing 2s;
+}
+
+@keyframes width_growing {
+    0% {
+        height: 0;
+        width: 0;
+    }
+}
+
+.opening .story_wrap .story_image{
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    filter: sepia(65%);
+}
+
+.opening .story_wrap .story_content{
+    width: 50%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 20px;
+    color: black;
+    line-height: 3;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
