@@ -129,15 +129,37 @@ polygon:hover {
     filter: sepia(65%);
 }
 
-.opening .story_wrap .story_content{
+.opening .story_wrap .story{
     width: 50%;
     height: 100%;
-    padding: 1.5rem;
-    font-size: 20px;
+    padding: 1rem;
+}
+
+.opening .story_wrap .story p.story_title{
     color: black;
-    line-height: 3;
+    margin: 0;
+    font-size: 32px;
+    animation: text_fade_in 2s;
+}
+
+.opening .story_wrap .story p.story_content{
+    font-size: 24px;
+    margin-top: 10px;
+    color: black;
+    line-height: 2;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
+    animation: text_fade_in 3s;
 }
 
+@keyframes text_fade_in{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
