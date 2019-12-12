@@ -130,26 +130,25 @@ polygon:hover {
 }
 
 .opening .story_wrap .story{
-    width: 50%;
-    height: 100%;
+    flex: 1;
     padding: 1rem;
 }
 
-.opening .story_wrap .story p.story_title{
+.opening .story_wrap .story .story_title{
     color: black;
     margin: 0;
     font-size: 32px;
     animation: text_fade_in 2s;
 }
 
-.opening .story_wrap .story p.story_content{
+.opening .story_wrap .story .story_content{
+    display: block;
     font-size: 24px;
     margin-top: 10px;
+    height: 80%;
     color: black;
     line-height: 2;
-    word-break: break-all;
     overflow: hidden;
-    text-overflow: ellipsis;
     animation: text_fade_in 3s;
 }
 
@@ -163,3 +162,4 @@ polygon:hover {
     100%{
         opacity: 1;
     }
+}
