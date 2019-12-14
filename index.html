@@ -12,7 +12,7 @@
     <title>神話人物介紹</title>
 </head>
 
-<body class="hover_open">
+<body class="list_hover_open">
     <div class="story_area">
         <i class="far fa-window-close close_icon" onclick="closeStroyArea()"></i>
         <div class="story_wrap">
@@ -130,8 +130,8 @@
         }
 
         function openList() {
-            $('body').removeClass('hover_open');
-            $(".story_wrap").attr("class", "story_wrap reducing");
+            $('body').removeClass('list_hover_open');
+            $(".story_wrap").attr("class", "story_wrap prevpage");
         }
     </script>
 </body>

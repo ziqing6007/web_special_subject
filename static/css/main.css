@@ -133,7 +133,7 @@ polygon:hover {
     }
 }
 
-.opening .story_wrap.reducing {
+.opening .story_wrap.prevpage {
     z-index: 5;
     animation: prev 2s;
     opacity: 0.5;
@@ -220,13 +220,13 @@ polygon:hover {
     transform: translateX(2%);
 }
 
-.hover_open .opening .list_wrap {
+.list_hover_open .opening .list_wrap {
     z-index: 5;
     opacity: 0.8;
     animation: width_growing 2s;
 }
 
-.hover_open .opening .list_wrap:hover {
+.list_hover_open .opening .list_wrap:hover {
     transform: translateX(3%);
     box-shadow: 10px 0 20px -5px sandybrown;
 }
