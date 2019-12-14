@@ -16,8 +16,10 @@
     <div class="story_area">
         <i class="far fa-window-close close_icon" onclick="closeStroyArea()"></i>
         <div class="story_wrap" onclick="changToStory()">
-            <img class="story_image" src="static/image/greece.jpg">
-            <div class="story" id="story">
+            <img class="story_image" src="static/image/greece.jpg" id="storyImage">
+            <div class="story">
+                <div class="story_title" id="storyTitle">希臘神話</div>
+                <div class="story_content" id="storyContent">希臘</div>
             </div>
         </div>
         <div class="list_wrap" onclick="changToList()">
@@ -127,7 +129,6 @@
         }
 
         function openStroyArea(name) {
-            $("#story").empty();
             var title = "";
             var content = "";
             switch (name) {
@@ -151,11 +152,10 @@
                     title = "印度神話";
                     content = "印度";
                     break;
-            }
-            $("#story").append(`
-            　　<div class="story_title">${title}</div>
-                <div class="story_content">${content}</div>
-            `)
+            };
+            $("#storyTitle").text(title);
+            $("#storyContent").text(content);
+            $("#storyImage").attr("src", "static/image/" + name + ".jpg");
             $(".story_area").attr("class", "story_area opening");
         }
 
