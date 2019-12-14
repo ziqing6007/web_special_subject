@@ -228,7 +228,7 @@ polygon:hover {
     box-shadow: 10px 0 20px -5px sandybrown;
 }
 
-.story_hover_open .opening .list{
+.story_hover_open .opening .list {
     margin: auto;
     top: 0;
     bottom: 0;
@@ -236,24 +236,44 @@ polygon:hover {
     right: 0;
     position: absolute;
     display: flex;
-    flex-wrap:wrap-reverse;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
-    align-content:space-around;
+    align-content: space-around;
     width: 90%;
     height: 90%;
 }
 
-.story_hover_open .slice_wrap{
-    width: 21%;
-    height: 10%;
-    background: brown;
+.list_hover_open .opening .list img {
+    visibility: hidden;
 }
 
-.story_hover_open .opening .list img{
+.story_hover_open .slice_wrap {
+    width: 21%;
+    height: 10%;
+    box-shadow: 1px 0 5px 0 black;
+    background-color: black;
+    position: relative;
+}
+
+.story_hover_open .opening .list img {
     width: 100%;
     height: 100%;
     border: solid 1px black;
     border-radius: 10%;
 }
 
+.story_hover_open .opening .test {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    visibility: hidden;
+    background: gold;
+    transition: opacity .2s, visibility .2s;
+}
 
+.story_hover_open .opening .list img:hover + .test {
+    visibility: visible;
+    opacity: 0.2;
+}
