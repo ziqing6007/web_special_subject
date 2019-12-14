@@ -15,19 +15,28 @@
 <body class="list_hover_open">
     <div class="story_area">
         <i class="far fa-window-close close_icon" onclick="closeStroyArea()"></i>
-        <div class="story_wrap">
+        <div class="story_wrap" onclick="changToStory()">
             <img class="story_image" src="static/image/greece.jpg">
-            <div class="story">
-                <div class="story_title" id="story_title">希臘神話</div>
-                <div class="story_content" id="story_content">
-                    奧林匹亞宙斯神廟 (希臘語：Ναὸς τοῦ Ὀλυμπίου Διός, Naos tou Olympiou
-                    Dios，又稱Olympieion），是一座已毀的供奉宙斯的神廟，位於希臘首都雅典市中心，憲法廣場以南700米，雅典衛城東南方500米。它始建於公元前6世紀，計劃建成古代世界最偉大的寺廟，直到638年後，公元2世紀羅馬帝國皇帝哈德良在位期間才得以完成。在羅馬帝國時期，它是希臘最大的神廟，擁有古代世界最大的神像之一。
-                    公元3世紀遭蠻族洗劫後，該廟被廢棄。在羅馬帝國滅亡後的數個世紀中，該廟的石料被大量取走，用於其他建築的材料。今天仍可見到其遺蹟，是雅典一個主要的旅遊景點。
-                    2007年1月21日，一群古希臘宗教教徒在神廟舉行崇拜宙斯的儀式。
-                </div>
+            <div class="story" id="story">
             </div>
         </div>
-        <div class="list_wrap" onclick="openList()">
+        <div class="list_wrap" onclick="changToList()">
+            <div class="list">
+                <div class="slice_wrap">
+                    <img src="static/image/greece/demeter_slice.png" alt="">
+                </div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+                <div class="slice_wrap"></div>
+            </div>
         </div>
     </div>
     <div>
@@ -52,11 +61,11 @@
                     <feMergeNode in="SourceGraphic" />
                 </feMerge>
             </filter>
-            <polygon id="area0" onclick="openStroyArea($(this).attr('id'))" />
-            <polygon id="area1" onclick="openStroyArea($(this).attr('id'))" />
-            <polygon id="area2" onclick="openStroyArea($(this).attr('id'))" />
-            <polygon id="area3" onclick="openStroyArea($(this).attr('id'))" />
-            <polygon id="area4" onclick="openStroyArea($(this).attr('id'))" />
+            <polygon id="area0" name="nordic" onclick="openStroyArea($(this).attr('name'))" />
+            <polygon id="area1" name="greece" onclick="openStroyArea($(this).attr('name'))" />
+            <polygon id="area2" name="egypt" onclick="openStroyArea($(this).attr('name'))" />
+            <polygon id="area3" name="india" onclick="openStroyArea($(this).attr('name'))" />
+            <polygon id="area4" name="china" onclick="openStroyArea($(this).attr('name'))" />
         </svg>
     </div>
     <script src="static/js/jquery-3.4.1.min.js"></script>
@@ -93,7 +102,7 @@
         })
 
         $(window).resize(function () {
-            setPoints("#area", 6);
+            setPoints("#area", 5);
         });
 
         function setPoints(areaId, areasQuantity) {
@@ -117,21 +126,61 @@
             }
         }
 
-        function openStroyArea(id) {
+        function openStroyArea(name) {
+            $("#story").empty();
+            var title = "";
+            var content = "";
+            switch (name) {
+                case "nordic":
+                    title = "北歐神話";
+                    content = "北歐";
+                    break;
+                case "china":
+                    title = "中國神話";
+                    content = "中國";
+                    break;
+                case "egypt":
+                    title = "埃及神話";
+                    content = "埃及";
+                    break;
+                case "greece":
+                    title = "希臘神話";
+                    content = "希臘";
+                    break;
+                case "india":
+                    title = "印度神話";
+                    content = "印度";
+                    break;
+            }
+            $("#story").append(`
+            　　<div class="story_title">${title}</div>
+                <div class="story_content">${content}</div>
+            `)
             $(".story_area").attr("class", "story_area opening");
         }
 
         function closeStroyArea() {
             $(".story_area").addClass("closing")
             setTimeout(function () {
+                $('body').attr("class", "list_hover_open");
+                $(".story_wrap").attr("class", "story_wrap");
                 $(".story_area").attr("class", "story_area");
             }, 200)
 
         }
 
-        function openList() {
-            $('body').removeClass('list_hover_open');
-            $(".story_wrap").attr("class", "story_wrap prevpage");
+        function changToList() {
+            if ($("body").attr("class") === "list_hover_open") {
+                $('body').attr("class", "story_hover_open");
+                $(".story_wrap").attr("class", "story_wrap prevpage");
+            }
+        }
+
+        function changToStory() {
+            if ($("body").attr("class") === "story_hover_open") {
+                $('body').attr("class", "list_hover_open");
+                $(".story_wrap").attr("class", "story_wrap");
+            }
         }
     </script>
 </body>
