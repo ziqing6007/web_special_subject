@@ -28,16 +28,19 @@ html, body {
 }
 
 polygon {
-    fill: transparent;
+    fill:rgba(245, 161, 27, 0.329);
+    stroke: rgba(248, 187, 136, 0.623);
+    stroke-width: 0.1%;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    animation: image_fade_in 1s;
+    filter: url(#shadow);
 }
 
 polygon:hover {
     cursor: pointer;
-    fill: transparent;
     stroke: rgba(117, 54, 2, 0.815);
-    stroke-width: 0.3%;
-    stroke-linejoin: round;
-    stroke-linecap: round;
+    stroke-width: 0.2%;
     stroke-dasharray: 0, 10000;
     stroke-dashoffset: 0;
     animation-name: lineMove;
