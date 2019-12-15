@@ -28,8 +28,8 @@ html, body {
 }
 
 polygon {
-    fill: rgba(245, 161, 27, 0.329);
-    stroke: rgba(248, 187, 136, 0.623);
+    fill: rgba(253, 168, 41, 0.308);
+    stroke: rgba(248, 196, 136, 0.897);
     stroke-width: 0.1%;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -55,7 +55,7 @@ polygon:hover {
     }
     100% {
         stroke-dasharray: 3000, 3000;
-        fill: rgba(221, 142, 22, 0.3);
+        fill: rgba(143, 86, 2, 0.3);
     }
 }
 
