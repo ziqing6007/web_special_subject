@@ -262,18 +262,20 @@ polygon:hover {
     border-radius: 10%;
 }
 
-.story_hover_open .opening .test {
+.story_hover_open .opening .slice_name {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
-    visibility: hidden;
-    background: gold;
-    transition: opacity .2s, visibility .2s;
+    background: black;
+    opacity: 0;
+    transition: opacity .2s;
+    color: white;
+    text-align: center; 
 }
 
-.story_hover_open .opening .list img:hover + .test {
-    visibility: visible;
-    opacity: 0.2;
+.story_hover_open .opening .list .slice_name:hover  {
+    opacity: 0.8;
+    cursor: pointer;
 }
