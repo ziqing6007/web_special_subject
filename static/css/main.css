@@ -263,16 +263,29 @@ polygon:hover {
 }
 
 .story_hover_open .opening .slice_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
-    background: black;
     opacity: 0;
-    transition: opacity .2s;
+    background: black;
+}
+
+.slice_name_text{
+    color:transparent;
+}
+
+.story_hover_open .opening .slice_name_text{
+    padding: 10px;
     color: white;
-    text-align: center; 
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: opacity .2s;
 }
 
 .story_hover_open .opening .list .slice_name:hover  {
