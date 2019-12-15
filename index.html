@@ -23,24 +23,13 @@
             </div>
         </div>
         <div class="list_wrap" onclick="changToList()">
-            <div class="list">
+            <div class="list" id="list">
                 <div class="slice_wrap">
                     <img src="static/image/greece/demeter_slice.png">
                     <div class="slice_name">
                         <div class="slice_name_text">demeterdemeterdemeterdemeter</div>
                     </div>
                 </div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
-                <div class="slice_wrap"></div>
             </div>
         </div>
     </div>
@@ -75,6 +64,7 @@
     </div>
     <script src="static/js/jquery-3.4.1.min.js"></script>
     <script src="static/js/materialize.min.js"></script>
+    <script src="static/js/introduce.js"></script>
     <script>
         var points = [];
         points[0] = [
@@ -156,6 +146,7 @@
                     content = "印度";
                     break;
             };
+            getList(name);
             $("#storyTitle").text(title);
             $("#storyContent").text(content);
             $("#storyImage").attr("src", "static/image/" + name + ".jpg");

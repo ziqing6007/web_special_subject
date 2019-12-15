@@ -164,15 +164,15 @@ polygon:hover {
 .story_title {
     color: black;
     margin: 0;
-    font-size: 24px;
+    font-size: 32px;
 }
 
-.opening .story_wrap .story .story_title {
+.list_hover_open .opening .story_wrap .story .story_title {
     animation: text_fade_in 2s;
 }
 
 .story_content {
-    font-size: 20px;
+    font-size: 28px;
     margin-top: 10px;
     height: 80%;
     color: black;
@@ -180,7 +180,7 @@ polygon:hover {
     overflow: hidden;
 }
 
-.opening .story_wrap .story .story_content {
+.list_hover_open .opening .story_wrap .story .story_content {
     animation: text_fade_in 3s;
 }
 
@@ -236,6 +236,7 @@ polygon:hover {
     right: 0;
     position: absolute;
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-content: space-around;
@@ -247,12 +248,19 @@ polygon:hover {
     visibility: hidden;
 }
 
+.list_hover_open .slice_wrap {
+    left: -50px;
+}
+
 .story_hover_open .slice_wrap {
+    left: 0px;
     width: 21%;
     height: 10%;
     box-shadow: 1px 0 5px 0 black;
     background-color: black;
     position: relative;
+    transition: left 2s;
+    animation: image_fade_in 2s;
 }
 
 .story_hover_open .opening .list img {
@@ -275,20 +283,21 @@ polygon:hover {
     background: black;
 }
 
-.slice_name_text{
-    color:transparent;
+.slice_name_text {
+    color: transparent;
 }
 
-.story_hover_open .opening .slice_name_text{
+.story_hover_open .opening .slice_name_text {
     padding: 10px;
     color: white;
-    overflow:hidden;
+    font-size: 18px;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: opacity .2s;
+    transition: opacity .2s ease;
 }
 
-.story_hover_open .opening .list .slice_name:hover  {
+.story_hover_open .opening .list .slice_name:hover {
     opacity: 0.8;
     cursor: pointer;
 }
