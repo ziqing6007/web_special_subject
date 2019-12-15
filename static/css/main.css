@@ -242,6 +242,7 @@ polygon:hover {
     align-content: space-around;
     width: 90%;
     height: 90%;
+    transition: opacity .2s ease;
 }
 
 .list_hover_open .opening .list img {
@@ -250,9 +251,11 @@ polygon:hover {
 
 .list_hover_open .slice_wrap {
     left: -50px;
+    visibility: hidden;
 }
 
 .story_hover_open .slice_wrap {
+    visibility: visible;
     left: 0px;
     width: 21%;
     height: 10%;
@@ -281,6 +284,7 @@ polygon:hover {
     right: 0;
     opacity: 0;
     background: black;
+    transition: opacity .2s ease;
 }
 
 .slice_name_text {
@@ -294,10 +298,58 @@ polygon:hover {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    transition: opacity .2s ease;
 }
 
 .story_hover_open .opening .list .slice_name:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+.nav_wrap {
+    z-index: 10;
+    position: absolute;
+    margin-left: 20px;
+    width: 13%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+nav {
+    display: table;
+    padding-top: 1vh;
+    background: url(/static/image/rope.png) top left repeat;
+    background-size: 125px;
+}
+
+a {
+    display: block;
+    position: relative;
+    text-align: center;
+    background: rgb(165, 42, 42);
+    color: white;
+    margin: 15px;
+    height: 12%;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px dashed rgba(255, 192, 203, 0.288);
+    outline: 2px solid rgb(165, 42, 42);
+    backface-visibility: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+a:hover{
+    text-decoration: none;
+    outline: 6px solid rgb(165, 42, 42);
+}
+
+a:nth-child(odd){
+    transform: rotate(2deg);
+}
+
+a:nth-child(even){
+    transform: rotate(-3deg);
+}
+
+a:hover:nth-child(odd), a:hover:nth-child(even){
+    transform: rotate(0deg);
 }

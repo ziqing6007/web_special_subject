@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="static/css/main.css">
     <script src="https://kit.fontawesome.com/2bc6e51340.js" crossorigin="anonymous"></script>
     <title>神話人物介紹</title>
@@ -23,15 +24,18 @@
             </div>
         </div>
         <div class="list_wrap" onclick="changToList()">
-            <div class="list" id="list">
-                <div class="slice_wrap">
-                    <img src="static/image/greece/demeter_slice.png">
-                    <div class="slice_name">
-                        <div class="slice_name_text">demeterdemeterdemeterdemeter</div>
-                    </div>
-                </div>
-            </div>
+            <div class="list" id="list"></div>
         </div>
+        <div class="nav_wrap">
+            <nav>
+                <a href="">身分</a>
+                <a href="">象徵</a>
+                <a href="">關係</a>
+                <a href="">事蹟</a>
+                <a href="">回上頁</a>
+            </nav>
+        </div>
+    </div>
     </div>
     <div>
         <img class="map" src="static/image/ancient map.jpg" id="map">
@@ -62,6 +66,7 @@
             <polygon id="area4" name="china" onclick="openStroyArea($(this).attr('name'))" />
         </svg>
     </div>
+
     <script src="static/js/jquery-3.4.1.min.js"></script>
     <script src="static/js/materialize.min.js"></script>
     <script src="static/js/introduce.js"></script>
@@ -89,6 +94,7 @@
         ];
 
         $(function () {
+            $('.collapsible').collapsible();
             $("#image_map").hide();
             setTimeout(function () {
                 $("#image_map").show();
@@ -160,11 +166,12 @@
                 $(".story_wrap").attr("class", "story_wrap");
                 $(".story_area").attr("class", "story_area");
             }, 200)
-
         }
 
         function changToList() {
             if ($("body").attr("class") === "list_hover_open") {
+                $(".list").css("opacity", "1");
+                $(".list").css("visibility", "visible");
                 $('body').attr("class", "story_hover_open");
                 $(".story_wrap").attr("class", "story_wrap prevpage");
             }

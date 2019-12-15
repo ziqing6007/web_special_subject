@@ -41,24 +41,29 @@ var slicePath = {
         "hephaestus_slice.png", "hermes_slice.png", "hestia_slice.png"
     ],
     india: [
-        "siva_slice.png", "brahma_slice.png", "siva_slice.png"
+        "visnu_slice.png", "brahma_slice.png", "siva_slice.png"
     ]
 };
-
-
-
 
 function getList(name) {
     $("#list").empty();
     for (var i = 0; i < godName[name].length; i++) {
+        var godNameText = godName[name][i];
+        var pathText = slicePath[name][i];
+        var targetIndex = pathText.search(/_/);
+        var godEnglishName = pathText.substring(0, targetIndex);
         $("#list").prepend(
-            `<div class="slice_wrap">
-                <img src="static/image/${name}/${slicePath[name][i]}">
-                <div class="slice_name">
-                    <div class="slice_name_text">${godName[name][i]}</div>
+            `<div class="slice_wrap" id="${godEnglishName}">
+                <img src="static/image/${name}/${pathText}">
+                <div class="slice_name" onclick="openDetail('${name}', '${godEnglishName}')">
+                    <div class="slice_name_text">${godNameText}</div>
                 </div>
             </div>`
         );
-
     }
+}
+
+function openDetail(area, godName) {
+    $(".list").css("opacity", "0");
+    $(".list").css("visibility", "hidden");
 }
