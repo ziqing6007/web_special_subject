@@ -24,16 +24,36 @@
             </div>
         </div>
         <div class="list_wrap" onclick="changToList()">
-            <div class="list" id="list"></div>
-        </div>
-        <div class="nav_wrap">
-            <nav>
-                <a href="">身分</a>
-                <a href="">象徵</a>
-                <a href="">關係</a>
-                <a href="">事蹟</a>
-                <a href="">回上頁</a>
-            </nav>
+            <div class="list_open list" id="list"></div>
+            <div class="introduce_wrap">
+                <i class="material-icons goback_icon" onclick="gobackList()">reply</i>
+                <div class="introduce_image">
+                    <img src="static/image/egypt/isis.png" id="storyImage">
+                </div>
+                <div class="introduce">
+                    <div class="god_name">伊西絲</div>
+                    <ul>
+                        <li>
+                            <p class="introduce_subtitle" onclick="statusToggle('test0')">身分</p>
+                            <p class="introduce_content" id="test0">死者的守護神、生命及健康女神、魔法女神。</p>
+                        </li>
+                        <li>
+                            <p class="introduce_subtitle" onclick="statusToggle('test1')">象徵</p>
+                            <p class="introduce_content" id="test1">頭飾為寶座加上眼鏡蛇。</p>
+                        </li>
+                        <li>
+                            <p class="introduce_subtitle" onclick="statusToggle('test2')">關係 </p>
+                            <p class="introduce_content" id="test2">蓋布及努特的長女，歐西里斯的妹妹及妻子，荷魯斯的母親。</p>
+                        </li>
+                        <li>
+                            <p class="introduce_subtitle" onclick="statusToggle('test3')">事蹟</p>
+                            <p class="introduce_content" id="test3">
+                                伊西斯對歐西里斯的復活起了關鍵作用。當歐西里斯被賽特殺害並肢解後，她收集散落在大地上的屍塊，並用魔法讓他重新復活。在伊西斯所有的功績中，最有名的是她施計誘騙塞特，在九柱神面前承認自己的罪過，以及發現了拉神的真名。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     </div>
@@ -94,7 +114,9 @@
         ];
 
         $(function () {
-            $('.collapsible').collapsible();
+            $(".list").hide();
+            $(".introduce_wrap").hide();
+            $(".introduce_content").hide();
             $("#image_map").hide();
             setTimeout(function () {
                 $("#image_map").show();
@@ -170,15 +192,23 @@
 
         function changToList() {
             if ($("body").attr("class") === "list_hover_open") {
-                $(".list").css("opacity", "1");
-                $(".list").css("visibility", "visible");
+                $(".introduce_wrap").hide();
+                $(".list").show();
+                $(".list").attr("class", "list_open list");
                 $('body').attr("class", "story_hover_open");
                 $(".story_wrap").attr("class", "story_wrap prevpage");
             }
         }
 
+        function gobackList() {
+            $(".introduce_wrap").hide();
+            $(".list").show();
+            $(".list").attr("class", "list_open list");
+        }
+
         function changToStory() {
             if ($("body").attr("class") === "story_hover_open") {
+                $(".introduce_wrap").hide();
                 $('body').attr("class", "list_hover_open");
                 $(".story_wrap").attr("class", "story_wrap");
             }

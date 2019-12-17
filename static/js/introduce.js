@@ -278,9 +278,15 @@ function getList(name) {
 }
 
 function openDetail(area, godName) {
+    console.log("test");
+    $(".list").attr("class", "list");
     setTimeout(function () {
         $(".list").hide();
     }, 2000)
-
+    $(".introduce_wrap").show();
     $("#test").toggle("slow");
+}
+
+function statusToggle(id){
+    $('#' + id).toggle("fast");
 }

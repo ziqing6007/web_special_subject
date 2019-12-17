@@ -107,6 +107,7 @@ polygon:hover {
     cursor: pointer;
 }
 
+
 .opening .story_wrap {
     z-index: 6;
     position: absolute;
@@ -228,7 +229,7 @@ polygon:hover {
     box-shadow: 10px 0 20px -5px sandybrown;
 }
 
-.story_hover_open .opening .list {
+.list{
     margin: auto;
     top: 0;
     bottom: 0;
@@ -243,6 +244,14 @@ polygon:hover {
     width: 90%;
     height: 90%;
     transition: opacity .2s ease;
+}
+
+.story_hover_open .opening .list_open.list {
+    opacity: 1;
+}
+
+.story_hover_open .opening .list {
+    opacity: 0;
 }
 
 .list_hover_open .opening .list img {
@@ -305,51 +314,73 @@ polygon:hover {
     cursor: pointer;
 }
 
-.nav_wrap {
-    z-index: 10;
-    position: absolute;
-    margin-left: 20px;
-    width: 13%;
+.introduce_wrap {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    padding: 2em;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: wheat;
+    box-shadow: 5px 0 rgba(61, 60, 59, 0.171);
+    opacity: 0;
+    transition: opacity .2s ease;
 }
 
-nav {
-    display: table;
-    padding-top: 1vh;
-    background: url(/static/image/rope.png) top left repeat;
-    background-size: 125px;
+.story_hover_open .opening .list_open .introduce_wrap {
+    opacity: 0;
 }
 
-a {
-    display: block;
-    position: relative;
+.story_hover_open .opening .introduce_wrap {
+    opacity: 1;
+    animation: text_fade_in 1.2s;
+}
+
+.goback_icon {
+    color: rgba(165, 42, 42, 0.466);
+    font-size: 3rem;
+    float: left;
+    cursor: pointer;
+}
+
+.story_hover_open .opening .introduce_image {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
     text-align: center;
-    background: rgb(165, 42, 42);
-    color: white;
-    margin: 15px;
-    height: 12%;
-    font-size: 18px;
-    text-decoration: none;
-    border: 2px dashed rgba(255, 192, 203, 0.288);
-    outline: 2px solid rgb(165, 42, 42);
-    backface-visibility: hidden;
-    transition: transform 0.2s ease-in-out;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    filter: sepia(65%);
 }
 
-a:hover{
-    text-decoration: none;
-    outline: 6px solid rgb(165, 42, 42);
+.story_hover_open .opening .introduce_image img {
+    height: 100%;
 }
 
-a:nth-child(odd){
-    transform: rotate(2deg);
+.story_hover_open .opening .introduce {
+    width: 50%;
+    height: 100%;
 }
 
-a:nth-child(even){
-    transform: rotate(-3deg);
+.story_hover_open .opening .introduce ul {
+    height: 80%;
+    overflow: hidden;
 }
 
-a:hover:nth-child(odd), a:hover:nth-child(even){
-    transform: rotate(0deg);
+.story_hover_open .opening .god_name {
+    font-size: 32px;
+}
+
+.story_hover_open .opening .introduce_subtitle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.story_hover_open .opening .introduce_content {
+    font-size: 20px;
 }
