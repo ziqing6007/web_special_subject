@@ -328,16 +328,11 @@ polygon:hover {
     background-color: wheat;
     box-shadow: 5px 0 rgba(61, 60, 59, 0.171);
     opacity: 0;
-    transition: opacity .2s ease;
+    transition: opacity 1s ease;
 }
 
-.story_hover_open .opening .list_open .introduce_wrap {
-    opacity: 0;
-}
-
-.story_hover_open .opening .introduce_wrap {
-    opacity: 1;
-    animation: text_fade_in 1.2s;
+.list_hover_open .opening .introduce_wrap{
+    visibility: hidden;
 }
 
 .goback_icon {
@@ -361,7 +356,7 @@ polygon:hover {
 
 .story_hover_open .opening .introduce_image img {
     max-height: 100%;
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 .story_hover_open .opening .introduce {
@@ -374,6 +369,13 @@ polygon:hover {
     overflow: hidden;
 }
 
+.story_hover_open .opening .introduce li {
+    margin-left: 1.5em;
+    display: list-item;
+    list-style-position:outside;
+    list-style-type: circle;
+}
+
 .story_hover_open .opening .god_name {
     font-size: 32px;
 }
@@ -381,6 +383,11 @@ polygon:hover {
 .story_hover_open .opening .introduce_subtitle {
     font-size: 24px;
     cursor: pointer;
+}
+
+.story_hover_open .opening .detail_icon {
+    margin-top: 10px;
+    margin-right: .2em;
 }
 
 .story_hover_open .opening .introduce_content {

@@ -374,22 +374,26 @@ function openDetail(area, godName) {
     $(".list").attr("class", "list");
     setTimeout(function () {
         $(".list").hide();
-    }, 1000)
-    var introduceArray = introduce[godName];
-    $("#introduceImage").attr("src", "static/image/" + area + "/" + godName + ".png");
-    $("#godName").text(introduceArray[0]);
-    for (var i = 1; i < introduceArray.length; i++) {
-        $("#introduce" + i).text(introduceArray[i]);
-    }
-    $(".introduce_wrap").show();
+        var introduceArray = introduce[godName];
+        $("#introduceImage").attr("src", "static/image/" + area + "/" + godName + ".png");
+        $("#godName").text(introduceArray[0]);
+        for (var i = 1; i < introduceArray.length; i++) {
+            $("#introduce" + i).text(introduceArray[i]);
+        }
+        $(".introduce_wrap").show();
+        $(".introduce_wrap").css("opacity", "1");
+    }, 500)
 }
 
 
 function goBackList() {
-    $(".introduce_wrap").hide();
-    $(".introduce_content").hide();
-    $(".list").show();
-    $(".list").attr("class", "list_open list");
+    $(".introduce_wrap").css("opacity", "0");
+    setTimeout(function () {
+        $(".introduce_wrap").hide();
+        $(".introduce_content").hide();
+        $(".list").show();
+        $(".list").attr("class", "list_open list");
+    }, 300)
 }
 
 function statusToggle(id) {
