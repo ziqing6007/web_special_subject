@@ -331,7 +331,7 @@ polygon:hover {
     transition: opacity 1s ease;
 }
 
-.list_hover_open .opening .introduce_wrap{
+.list_hover_open .opening .introduce_wrap {
     visibility: hidden;
 }
 
@@ -371,25 +371,29 @@ polygon:hover {
 
 .story_hover_open .opening .introduce li {
     margin-left: 1.5em;
-    display: list-item;
-    list-style-position:outside;
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 .story_hover_open .opening .god_name {
     font-size: 32px;
+    font-weight: bold;
 }
 
-.story_hover_open .opening .introduce_subtitle {
+.story_hover_open .opening .introduce_title {
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.story_hover_open .opening .detail_icon {
-    margin-top: 10px;
-    margin-right: .2em;
+.story_hover_open .opening .introduce_content {
+    font-size: 16px;
 }
 
-.story_hover_open .opening .introduce_content {
+.story_hover_open .opening .introduce_subtitle {
     font-size: 20px;
+    font-weight: bold;
+}
+
+.story_hover_open .opening .introduce .introduce_inner_content {
+    list-style-type: circle;
 }

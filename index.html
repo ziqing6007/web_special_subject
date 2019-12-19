@@ -34,19 +34,24 @@
                     <div class="god_name" id="godName"></div>
                     <ul>
                         <li>
-                            <p class="introduce_subtitle" onclick="statusToggle('introduce1')">身分</p>
-                            <p class="introduce_content" id="introduce1"></p>
+                            <p class="introduce_title" onclick="statusToggle('introduceInnerContent', 'introduce4')">介紹</p>
+                            <ul id="introduceInnerContent">
+                                <li class="introduce_inner_content">
+                                    <p class="introduce_subtitle">身分</p>
+                                    <p class="introduce_content" id="introduce1"></p>
+                                </li>
+                                <li class="introduce_inner_content">
+                                    <p class="introduce_subtitle">象徵</p>
+                                    <p class="introduce_content" id="introduce2"></p>
+                                </li>
+                                <li class="introduce_inner_content">
+                                    <p class="introduce_subtitle">關係 </p>
+                                    <p class="introduce_content" id="introduce3"></p>
+                                </li class="introduce_inner_content">
+                            </ul>
                         </li>
                         <li>
-                            <p class="introduce_subtitle" onclick="statusToggle('introduce2')">象徵</p>
-                            <p class="introduce_content" id="introduce2"></p>
-                        </li>
-                        <li>
-                            <p class="introduce_subtitle" onclick="statusToggle('introduce3')">關係 </p>
-                            <p class="introduce_content" id="introduce3"></p>
-                        </li>
-                        <li>
-                            <p class="introduce_subtitle" onclick="statusToggle('introduce4')">事蹟</p>
+                            <p class="introduce_title" onclick="statusToggle('introduce4', 'introduceInnerContent')">事蹟</p>
                             <p class="introduce_content" id="introduce4"></p>
                         </li>
                     </ul>
@@ -114,7 +119,7 @@
         $(function () {
             $(".list").hide();
             $(".introduce_wrap").hide();
-            $(".introduce_content").hide();
+            $("#introduce4").hide();
             $("#image_map").hide();
             setTimeout(function () {
                 $("#image_map").show();

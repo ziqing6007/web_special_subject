@@ -1,10 +1,10 @@
 var godName = {
     nordic: [
         "奧丁", "弗麗嘉", "索爾", "希芙", "洛基",
-        "巴德爾", "霍德爾", "凡賽堤", "提爾", "海姆達爾"
+        "巴德爾", "霍德爾", "提爾", "海姆達爾"
     ],
     china: [
-
+        "女媧", "伏羲", "盤古"
     ],
     egypt: [
         "拉", "舒", "泰芙努特", "蓋布",
@@ -23,10 +23,12 @@ var godName = {
 
 var slicePath = {
     nordic: [
-
+        "odin_slice.png", "frigga_slice.png", "thor_slice.png",
+        "sif_slice.png", "loki_slice.png", "baldur_slice.png",
+        "hodr_slice.png", "tyr_slice.png", "heimdall_slice.png"
     ],
     china: [
-
+        "nuwa_slice.png", "fuxi_slice.png", "pangu_slice.png"
     ],
     egypt: [
         "ra_slice.png", "shu_slice.png", "tefnut_slice.png",
@@ -95,13 +97,6 @@ var introduce = {
         "丁及弗麗嘉的兒子，巴德爾的攣生兄弟。",
         "被洛基用計欺騙殺害了自己的兄弟巴德爾，並被奧丁和女巨人琳達的孩子瓦利用弓箭射殺了盲眼的黑暗之神霍德爾，為巴德爾報仇。"
     ],
-    forseti: [
-        "凡賽堤",
-        "真理及正義之神。",
-        "不喜戰鬥。",
-        "巴德爾的女兒。",
-        "凡賽堤對需要調解的事務提出仲裁。他是諸神中最聰明正直、善雄辯的一位，他的判決也絕對公正，沒有人能違抗他的判決，違抗者將得到他正直不私的處罰──死亡。所以最重要的誓言，常是指著他的名義發下的。"
-    ],
     tyr: [
         "提爾",
         "戰神。",
@@ -114,10 +109,32 @@ var introduce = {
         "彩虹橋的看守者。",
         "號角。",
         "一般認為其父為奧丁。",
-        "傳說中，人類的三個階級是海姆達爾創出來的。他曾化名為里格，並在三個家庭中住宿。 /n" +
-        "第一個家庭住著一對老夫妻，他們過著勤勞、刻苦的生活，里格（海姆達爾）離開後，這家庭生下一個孩子，被命名為「薩爾」（Thrall），亦即「奴隸」，所有「奴隸」階級的人都是從他們傳下來的。 /n" +
-        "第二個家庭較為富裕，他們擅長馴養牲畜，造屋理田。里格離開後，這家庭生下一個孩子，被命名為「卡爾」（Karl），亦即「農民」，即「自由民」階級的祖先。 /n" +
-        "第三個家庭非常富有，他們擁有精美的裝飾品，配戴者的氣質優雅。里格離開後，這家庭生下一個孩子，被命名為「雅爾」（Jarl），亦即「王侯」。雅爾長大後，海姆達爾就又出現在他面前，讓他繼承了大量的金銀，又教他如尼文字。於是雅爾在戰爭中獲得許多土地和財富，是為斯堪地那維亞諸邦王室及貴族之始祖。 /n"
+        "傳說中，人類的三個階級是海姆達爾創出來的。他曾化名為里格，在三個家庭中住宿。" +
+        "第一個家庭住著一對老夫妻，過著勤勞、刻苦的生活，里格離開後，這家庭生下一個孩子，被命名為「薩爾」，亦即「奴隸」，「奴隸」階級的人都是從他們傳下來的。" +
+        "第二個家庭較為富裕，擅長馴養牲畜，造屋理田。里格離開後，這家庭生下一個孩子，被命名為「卡爾」，亦即「農民」，「自由民」階級的祖先。" +
+        "第三個家庭非常富有，擁有精美的裝飾品，配戴者的氣質優雅。里格離開後，這家庭生下一個孩子，被命名為「雅爾」，亦即「王侯」。雅爾長大後，海姆達爾就又出現在他面前，讓他繼承了大量的金銀，又教他如尼文字。於是雅爾在戰爭中獲得許多土地和財富，是為斯堪地那維亞諸邦王室及貴族之始祖。"
+    ],
+    //中國
+    nuwa: [
+        "女媧",
+        "創世女神。",
+        "人首蛇身。",
+        "伏羲之妹。",
+        "傳說中女媧是人首蛇身的神，以土造人，原本用黃土捏成人形來造人，後來因為過程太過於繁雜，所以改用藤條拍打黃土，而黃土落到地上就變成了人類。而傳說女媧和伏羲開創了婚姻，成為第一對夫妻，但他們同時也是兄妹，而之後規定同姓氏不得結婚。而女媧還有一個知名的傳說，也就是女媧補天，傳說火神祝融和水神共工爭鬥，共工輸了後撞斷支撐天地的一根柱子導致天空破了一個洞，而女媧則花費了七七四十九天煉製五彩神石來補天，後又砍下巨鱉的腳來充當柱子，讓天地得以回復原樣。"
+    ],
+    fuxi: [
+        "伏羲",
+        "人類文化始祖、三皇之一。",
+        "人首蛇身。",
+        "女媧之兄",
+        "伏羲被稱為人類文化始祖，他有著無數功績，包括發明了八卦，開創了中國古文字的開端；教民馴養野獸；變革婚姻習俗，提倡男聘女嫁的習俗；結束了原始的子女只知其母不知其父的群婚型態；創古代曆法；發明樂器；創九針，後來成為中醫的根源。"
+    ],
+    pangu: [
+        "盤古",
+        "開天闢地的巨人。",
+        "巨斧。",
+        "無。",
+        "傳說中天地本是連在一起，呈現一整塊混沌，而盤古突然誕生，並用手上的巨斧劈開這塊混沌，手撐天；腳踏地，從此世界分成了天和地，並隨著時間，盤古將天地越撐越開，直到變成了我們今天所熟悉的天與地，而盤古死去後，雙目化為日月，身體化為各種自然景觀，變成了我們熟知的世界。"
     ],
     //埃及
     ra: [
@@ -336,8 +353,9 @@ function closeStroyArea() {
 
 function changToList() {
     if ($("body").attr("class") === "list_hover_open") {
-        $(".introduce_wrap").hide();
         $(".list").show();
+        $("#introduceInnerContent").show();
+        $("#introduce4").hide();
         $(".list").attr("class", "list_open list");
         $('body').attr("class", "story_hover_open");
         $(".story_wrap").attr("class", "story_wrap prevpage");
@@ -346,7 +364,8 @@ function changToList() {
 
 function changToStory() {
     if ($("body").attr("class") === "story_hover_open") {
-        $(".introduce_wrap").hide();
+        $("#introduceInnerContent").show();
+        $("#introduce4").hide();
         $('body').attr("class", "list_hover_open");
         $(".story_wrap").attr("class", "story_wrap");
     }
@@ -382,7 +401,7 @@ function openDetail(area, godName) {
         }
         $(".introduce_wrap").show();
         $(".introduce_wrap").css("opacity", "1");
-    }, 500)
+    }, 1000)
 }
 
 
@@ -390,12 +409,14 @@ function goBackList() {
     $(".introduce_wrap").css("opacity", "0");
     setTimeout(function () {
         $(".introduce_wrap").hide();
-        $(".introduce_content").hide();
+        $("#introduceInnerContent").show();
+        $("#introduce4").hide();
         $(".list").show();
         $(".list").attr("class", "list_open list");
-    }, 300)
+    }, 1000)
 }
 
-function statusToggle(id) {
-    $('#' + id).toggle("fast");
+function statusToggle(openId, closeId) {
+    $('#' + openId).toggle("fast");
+    $('#' + closeId).toggle("fast");
 }
