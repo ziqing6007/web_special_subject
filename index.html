@@ -19,8 +19,8 @@
         <div class="story_wrap" onclick="changToStory()">
             <img class="story_image" src="static/image/greece.jpg" id="storyImage">
             <div class="story">
-                <div class="story_title" id="storyTitle">希臘神話</div>
-                <div class="story_content" id="storyContent">希臘</div>
+                <div class="story_title" id="storyTitle"></div>
+                <div class="story_content" id="storyContent"></div>
             </div>
         </div>
         <div class="list_wrap" onclick="changToList()">
@@ -34,7 +34,7 @@
                     <div class="god_name" id="godName"></div>
                     <ul>
                         <li>
-                            <div class="introduce_title" onclick="statusToggle('introduceInnerContent', 'introduce4')">介紹</div>
+                            <div class="introduce_title" onclick="statusToggle('#introduceInnerContent', '#introduce4')">介紹</div>
                             <ul id="introduceInnerContent">
                                 <li class="introduce_inner_content">
                                     <div class="introduce_subtitle">身分</div>
@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div class="introduce_title" onclick="statusToggle('introduce4', 'introduceInnerContent')">事蹟</div>
+                            <div class="introduce_title" onclick="statusToggle('#introduce4', '#introduceInnerContent')">事蹟</div>
                             <div class="introduce_content" id="introduce4"></div>
                         </li>
                     </ul>

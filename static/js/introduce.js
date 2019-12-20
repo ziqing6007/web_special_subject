@@ -421,6 +421,8 @@ function goBackList() {
 }
 
 function statusToggle(openId, closeId) {
-    $('#' + openId).toggle("fast");
-    $('#' + closeId).toggle("fast");
+    if($(closeId).is(':visible')){
+        $(closeId).toggle("fast");
+    }
+    $(openId).toggle("fast");
 }
