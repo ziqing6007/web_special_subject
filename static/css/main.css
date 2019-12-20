@@ -382,6 +382,7 @@ polygon:hover {
 .story_hover_open .opening .introduce_title {
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
     cursor: pointer;
 }
 
@@ -390,6 +391,7 @@ polygon:hover {
 }
 
 .story_hover_open .opening .introduce_subtitle {
+    margin: 5px;
     font-size: 20px;
     font-weight: bold;
 }
