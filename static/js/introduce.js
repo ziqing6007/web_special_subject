@@ -1,3 +1,26 @@
+var story = {
+    nordic: [
+        "北歐神話",
+        "北歐神話比起其他神話更加著重在描寫毀滅上，許多遊戲或是影視作品常常提到的諸神黃昏就是北歐神話出來的，諸神黃昏指的是北歐的神們經過一定週期所必定會經歷的一場大戰爭，在這場戰爭中，世界會因為眾神的戰爭而毀滅，而倖存的神則會到另一個新世界繼續發展。"
+    ],
+    china: [
+        "中國神話",
+        "這裡的中國神話並不是指玉皇大帝那一夥神，而是指上古神話的神，而在這裡也舉出三位有名且對後世影響巨大的神來做介紹。其實中國神祇（不管是神話或是道教的神）中有不少神在歷史上是有真實人物參考的，但跟其他神話比起來反而中國神的性格和慾望比較不明顯，更偏向我們認知的神，而不像人。"
+    ],
+    egypt: [
+        "埃及神話",
+        "埃及位在沙漠地區，日照時常影響著人們的生活，所以埃及神畫的主神也同時是太陽神，而跟希臘神比較起來，埃及神中出現很多兄妹通婚的情況，這也導致了埃及王室喜歡近親結婚的習俗。埃及神還有一個特色就是很多神的形象相似，這也導致了用來辨認各個埃及神的方法反而是用式品來區別。"
+    ],
+    greece: [
+        "希臘神話",
+        "雖然說是希臘神話，但其實希臘神話是流傳於巴爾幹半島附近一帶的神話。傳說希臘神會在人類的戰爭中插上一腳，所以在巴爾幹半島還在城市時期的時候才會有不少以神命名的城市。希臘神話的總讓人有種莫名的親近感，因為祂們跟我們人一樣有七情六慾，其中最突出的就是性慾，就像愛神，除了元配丈夫的火神外，還與多位男神有染，而主神宙斯更是神及凡人都不拘，而且個個神之間會互相爭鬥，像戰神及女戰神就長期爭鬥。"
+    ],
+    india: [
+        "印度神話",
+        "印度神其實有不少神，不過有很多都是其他宗教融合的神，所以這裡我們舉出了三個最主要的神祇來做介紹。印度的神有一個特色就是通常一個神會有多個形象，而這些形象有可以能會在其他宗教或是其他地區的故事中出現，就像這三大神祇，其實有些就在佛教的故事可串出場，只是名字不同。"
+    ]
+};
+
 var godName = {
     nordic: [
         "奧丁", "弗麗嘉", "索爾", "希芙", "洛基",
@@ -311,33 +334,9 @@ var introduce = {
 
 
 function openStroyArea(name) {
-    var title = "";
-    var content = "";
-    switch (name) {
-        case "nordic":
-            title = "北歐神話";
-            content = "北歐";
-            break;
-        case "china":
-            title = "中國神話";
-            content = "中國";
-            break;
-        case "egypt":
-            title = "埃及神話";
-            content = "埃及";
-            break;
-        case "greece":
-            title = "希臘神話";
-            content = "希臘";
-            break;
-        case "india":
-            title = "印度神話";
-            content = "印度";
-            break;
-    };
     getList(name);
-    $("#storyTitle").text(title);
-    $("#storyContent").text(content);
+    $("#storyTitle").text(story[name][0]);
+    $("#storyContent").text(story[name][1]);
     $("#storyImage").attr("src", "static/image/" + name + ".jpg");
     $(".story_area").attr("class", "story_area opening");
 }
@@ -352,7 +351,7 @@ function closeStroyArea() {
     }, 200)
 }
 
-function initIntroducePage(){
+function initIntroducePage() {
     $(".introduce_wrap").hide();
     $("#introduceInnerContent").show();
     $("#introduce4").hide();
