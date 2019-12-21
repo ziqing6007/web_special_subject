@@ -45,7 +45,7 @@ polygon {
 
 polygon:hover {
     cursor: pointer;
-    stroke: rgba(117, 54, 2, 0.815);
+    stroke: navajowhite;
     stroke-width: 0.2%;
     stroke-dasharray: 0, 3000;
     stroke-dashoffset: 0;
