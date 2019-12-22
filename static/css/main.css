@@ -47,7 +47,7 @@ polygon:hover {
     cursor: pointer;
     stroke: navajowhite;
     stroke-width: 0.2%;
-    stroke-dasharray: 0, 3000;
+    stroke-dasharray: 0, 2000;
     stroke-dashoffset: 0;
     animation-name: lineMove;
     animation-duration: 3s;
@@ -311,7 +311,7 @@ polygon:hover {
 .story_hover_open .opening .slice_name_text {
     padding: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 2vmin;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

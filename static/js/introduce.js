@@ -343,6 +343,8 @@ function openStroyArea(name) {
 
 function closeStroyArea() {
     $(".story_area").addClass("closing")
+    $(".introduce_wrap").hide();
+    $(".introduce_wrap").css("opacity", "0");
     setTimeout(function () {
         $('body').attr("class", "list_hover_open");
         $(".story_wrap").attr("class", "story_wrap");
@@ -371,6 +373,8 @@ function changToStory() {
     if ($("body").attr("class") === "story_hover_open") {
         $('body').attr("class", "list_hover_open");
         $(".story_wrap").attr("class", "story_wrap");
+        $(".introduce_wrap").hide();
+        $(".introduce_wrap").css("opacity", "0");
         initIntroducePage();
     }
 }
@@ -421,7 +425,7 @@ function goBackList() {
 }
 
 function statusToggle(openId, closeId) {
-    if($(closeId).is(':visible')){
+    if ($(closeId).is(':visible')) {
         $(closeId).toggle("fast");
     }
     $(openId).toggle("fast");
