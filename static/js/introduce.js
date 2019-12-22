@@ -341,6 +341,24 @@ function openStroyArea(name) {
     $(".story_area").attr("class", "story_area opening");
 }
 
+function getList(name) {
+    $("#list").empty();
+    for (var i = 0; i < godName[name].length; i++) {
+        var godNameText = godName[name][i];
+        var pathText = slicePath[name][i];
+        var targetIndex = pathText.search(/_/);
+        var godEnglishName = pathText.substring(0, targetIndex);
+        $("#list").prepend(
+            `<div class="slice_wrap" id="${godEnglishName}">
+                <img src="static/image/${name}/${pathText}">
+                    <div class="slice_name" onclick="openDetail('${name}', '${godEnglishName}')">
+                        <div class="slice_name_text">${godNameText}</div>
+                    </div>
+            </div>`
+        );
+    }
+}
+
 function closeStroyArea() {
     $(".story_area").addClass("closing")
     $(".introduce_wrap").hide();
@@ -376,24 +394,6 @@ function changToStory() {
         $(".introduce_wrap").hide();
         $(".introduce_wrap").css("opacity", "0");
         initIntroducePage();
-    }
-}
-
-function getList(name) {
-    $("#list").empty();
-    for (var i = 0; i < godName[name].length; i++) {
-        var godNameText = godName[name][i];
-        var pathText = slicePath[name][i];
-        var targetIndex = pathText.search(/_/);
-        var godEnglishName = pathText.substring(0, targetIndex);
-        $("#list").prepend(
-            `<div class="slice_wrap" id="${godEnglishName}">
-                <img src="static/image/${name}/${pathText}">
-                    <div class="slice_name" onclick="openDetail('${name}', '${godEnglishName}')">
-                        <div class="slice_name_text">${godNameText}</div>
-                    </div>
-            </div>`
-        );
     }
 }
 
