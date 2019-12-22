@@ -147,6 +147,7 @@ polygon:hover {
 .story_hover_open .opening .story_wrap.prevpage:hover {
     transform: translateX(-3%);
     box-shadow: -10px 0 20px -5px sandybrown;
+    cursor: pointer;
 }
 
 .story_image {
@@ -216,19 +217,18 @@ polygon:hover {
 .opening .list_wrap {
     z-index: 6;
     box-shadow: -5px 0 rgba(61, 60, 59, 0.171);
-    animation: image_fade_in 2s;
     transform: translateX(2%);
 }
 
 .list_hover_open .opening .list_wrap {
     z-index: 5;
     opacity: 0.8;
-    animation: image_fade_in 2s;
 }
 
 .list_hover_open .opening .list_wrap:hover {
     transform: translateX(3%);
     box-shadow: 10px 0 20px -5px sandybrown;
+    cursor: pointer;
 }
 
 .list {
